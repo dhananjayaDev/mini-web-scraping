@@ -1,5 +1,7 @@
 # 🛒 Mock Amazon Scraper Project
 
+![Banner](https://github.com/dhananjayaDev/mini-web-scraping/blob/main/web%20scrape%20project%20banner.png)
+
 A modular mini-project that simulates a dynamic e-commerce store and showcases web scraping skills using **BeautifulSoup**, **Selenium**, and **Flask**. Built with recruiter appeal in mind—clean UI, editable data, and live scraping feedback.
 
 ---
