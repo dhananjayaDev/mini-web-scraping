@@ -103,7 +103,9 @@ Then open:
 
 ##  Demo Screenshots
 
-> _Coming soon: add screenshots or GIFs here_
+![Store Demo](scrape_gif01.gif)
+![Scraper Demo](scrape_gif02.gif)
+
 
 ---
 
