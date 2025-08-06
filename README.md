@@ -1,4 +1,4 @@
-# 🛒 Mock Amazon Scraper Project
+# Mock Amazon Scraper Project
 
 ![Banner](https://github.com/dhananjayaDev/mini-web-scraping/blob/main/web%20scrape%20project%20banner.png)
 
