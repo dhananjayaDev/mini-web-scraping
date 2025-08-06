@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mock Amazon Store</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .card-img-top {
+            height: 200px;
+            object-fit: contain;
+            background-color: #f8f8f8;
+        }
+        .card:hover {
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            transform: scale(1.02);
+            transition: 0.3s ease;
+        }
+        .rating {
+            color: #ffa41c;
+            font-weight: bold;
+        }
+        .delivery {
+            font-size: 0.9em;
+            color: #007600;
+        }
+        .edit-form {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container mt-4">
+    <h1 class="mb-4">🛒 Mock Amazon Store</h1>
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-3">
+            <div class="card mb-4">
+                <img src="{{ product.image }}" class="card-img-top" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">Price: $<span class="price">{{ product.price }}</span></p>
+                    <p class="rating">★ {{ product.rating }}</p>
+                    <p class="delivery">{{ product.delivery }}</p>
+                    <form method="POST" action="/update_price" class="edit-form">
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        <div class="form-group">
+                            <input type="number" step="0.01" name="new_price" class="form-control form-control-sm" placeholder="New price" required>
+                        </div>
+                        <button type="submit" class="btn btn-outline-secondary btn-sm">Update Price</button>
+                    </form>
+                    <button class="btn btn-warning btn-sm mt-2">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>
